@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>THE UNIVERSITY OF ZIMBABWE</title>
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="effects.css">
+    </head>
+    <body>
+
+        <!-- Navigation -->
+        <nav class="navbar">
+            <div class="nav-brand">UZ - FMHS</div>
+            <button class="hamburger" id="hamburgerBtn" aria-label="Toggle navigation">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="design.html">Home</a></li>
+                <li><a href="design2.html">About</a></li>
+                <li><a href="design3.html">What We Offer</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+
+        <!-- Dark/Light Mode Toggle -->
+        <button class="theme-toggle btn" id="themeToggle">
+            <span id="themeLabel">🌙 Dark Mode</span>
+        </button>
+
+        <!-- Main Content -->
+        <h1 id="mainTitle">THE UNIVERSITY OF ZIMBABWE</h1>
+        <h2 id="welcomeMessage">Faculty Of Medicine And Health Sciences</h2>
+        <br>
+        <img src="uzlogo.jpeg" alt="University of Zimbabwe Logo" id="uzLogo">
+        <br>
+        <p id="introText">Welcome to The University of Zimbabwe's Faculty of Medicine and Health Sciences page. We are excited to have you here. Our department brings together science, technology and creativity to improve healthcare in our communities. We are dedicated to innovation in healthcare and research. We aim to train future healthcare workers to tackle healthcare challenges in Zimbabwe and strive to equip students with the knowledge and skills to develop cutting-edge solutions that improve lives in Zimbabwe and beyond.</p>
+
+        <!-- Button Interaction (Level 1 Req 1) -->
+        <button class="btn btn-1 effect-one" id="revealBtn">
+            <span>Learn More About Us</span>
+        </button>
+
+        <div id="extraInfo" class="hidden-info">
+            <p>🏥 Founded with a mission to serve Zimbabwe's healthcare needs, our faculty has produced thousands of skilled medical professionals over the decades.</p>
+        </div>
+
+        <a href="design2.html">
+            <button class="btn btn-1 effect-one"><span>About</span></button>
+        </a>
+        <a href="design3.html">
+            <button class="btn btn-1 effect-one"><span>What We Offer</span></button>
+        </a>
+
+        <!-- Contact Form (Level 2 Req 6) -->
+        <section id="contact" class="contact-section">
+            <h2>Contact Us</h2>
+            <div id="formMessage" class="form-message"></div>
+            <div class="contact-form">
+                <div class="form-group">
+                    <label for="nameInput">Full Name</label>
+                    <input type="text" id="nameInput" placeholder="Enter your full name">
+                </div>
+                <div class="form-group">
+                    <label for="emailInput">Email Address</label>
+                    <input type="email" id="emailInput" placeholder="Enter your email">
+                </div>
+                <div class="form-group">
+                    <label for="messageInput">Message</label>
+                    <textarea id="messageInput" rows="4" placeholder="Write your message here..."></textarea>
+                </div>
+                <button class="btn btn-1 effect-one" id="submitBtn"><span>Send Message</span></button>
+            </div>
+        </section>
+
+        <script src="script.js"></script>
+    </body>
+</html>

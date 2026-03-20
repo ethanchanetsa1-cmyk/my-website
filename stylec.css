@@ -1,0 +1,211 @@
+/* ============================================================
+   Base & Reset
+   ============================================================ */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+::before {
+    position: absolute;
+    content: "";
+}
+
+/* ============================================================
+   Body - Departments Page (Light Mode default)
+   ============================================================ */
+body {
+    background-color: rgb(141, 61, 39);
+    font-size: larger;
+    image-rendering: crisp-edges;
+    text-align: center;
+    border: 8px solid bisque;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    transition: background 0.4s ease, color 0.4s ease;
+    padding-bottom: 40px;
+}
+
+/* ============================================================
+   Dark Mode
+   ============================================================ */
+body.dark-mode {
+    background-color: rgb(15, 15, 25);
+    color: #e0e0e0;
+    border-color: #444;
+}
+
+body.dark-mode .navbar {
+    background-color: rgba(0, 0, 0, 0.85);
+}
+
+body.dark-mode .dept-list li {
+    background-color: rgba(255, 255, 255, 0.06);
+    border-color: #555;
+    color: #ddd;
+}
+
+/* ============================================================
+   Navbar
+   ============================================================ */
+.navbar {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: rgba(80, 30, 10, 0.9);
+    padding: 12px 24px;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    flex-wrap: wrap;
+}
+
+.nav-brand {
+    color: bisque;
+    font-size: 1.2rem;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    padding: 0;
+    margin: 0;
+}
+
+.nav-links li a {
+    color: bisque;
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: bold;
+    transition: color 0.2s;
+}
+
+.nav-links li a:hover {
+    color: white;
+}
+
+.hamburger {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 4px;
+}
+
+.hamburger span {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background-color: bisque;
+    border-radius: 2px;
+    transition: 0.3s;
+}
+
+.hamburger.active span:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+}
+.hamburger.active span:nth-child(2) {
+    opacity: 0;
+}
+.hamburger.active span:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+}
+
+@media (max-width: 600px) {
+    .hamburger {
+        display: flex;
+    }
+
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        gap: 10px;
+        padding: 10px 0;
+    }
+
+    .nav-links.nav-open {
+        display: flex;
+    }
+}
+
+/* ============================================================
+   Theme Toggle Button
+   ============================================================ */
+.theme-toggle {
+    margin: 16px auto 8px;
+    background-color: burlywood;
+    color: #222;
+    font-weight: bold;
+    font-size: 0.95rem;
+    padding: 8px 18px;
+    border-radius: 20px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.theme-toggle:hover {
+    background-color: bisque;
+}
+
+/* ============================================================
+   Departments List
+   ============================================================ */
+.dept-list {
+    list-style: none;
+    margin: 24px auto;
+    width: 90%;
+    max-width: 700px;
+    text-align: left;
+}
+
+.dept-list li {
+    background-color: rgb(116, 77, 44);
+    border: 2px solid burlywood;
+    border-radius: 6px;
+    margin-bottom: 10px;
+    padding: 12px 18px;
+    font-size: 1rem;
+    color: white;
+    transition: background-color 0.2s;
+}
+
+.dept-list li:hover {
+    background-color: rgb(140, 95, 60);
+}
+
+/* ============================================================
+   Buttons
+   ============================================================ */
+.btn {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+    border: none;
+    background-color: thistle;
+    margin: 8px;
+}
+
+.btn span {
+    position: relative;
+    display: inline-block;
+    top: 0;
+    left: 0;
+    font-size: xx-large;
+    font-weight: bold;
+    text-transform: capitalize;
+    letter-spacing: 2px;
+    width: 100%;
+    padding: 15px 25px;
+    transition: 0.5s;
+}
